@@ -1,3 +1,8 @@
+document.getElementById('btn-blog').addEventListener('click', function(){
+    window.location.href ='blog.html';
+})
+
+
 document.getElementById('btn-triangle').addEventListener('click', function(){
   const triangleInputField1 = document.getElementById('triangle-input-field1');
   const triangleValue1 = triangleInputField1.value;

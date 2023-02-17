@@ -1,9 +1,9 @@
 document.getElementById('btn-triangle').addEventListener('click', function(){
-  const triangleInputField1 = document.getElementById('tri-input-field1');
+  const triangleInputField1 = document.getElementById('triangle-input-field1');
   const triangleValue1 = triangleInputField1.value;
   console.log(triangleValue1)
 
-  const triangleInputField2 = document.getElementById('tri-input-field2');
+  const triangleInputField2 = document.getElementById('triangle-input-field2');
   const triangleValue2 = triangleInputField2.value;
   console.log(triangleValue2)
 
@@ -17,4 +17,22 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 })
 
 
+
+document.getElementById('btn-rectangle').addEventListener('click', function(){
+    const rectangleWidthField = document.getElementById('rectangle-width-field');
+    const rectangleWidthValue = rectangleWidthField.value;
+    console.log(rectangleWidthValue)
+  
+    const rectangleLengthField = document.getElementById('rectangle-length-field');
+    const rectangleLengthValue = rectangleLengthField.value;
+    console.log(rectangleLengthValue)
+  
+    const areaOfRectangle = rectangleWidthValue * rectangleLengthValue;
+    console.log(areaOfRectangle)
+  
+    const areaCalculation = document.getElementById('area-calculation')
+    const ol = document.createElement('ol');
+    ol.innerText = 'Rectangle'  + areaOfRectangle  + 'cm';
+    areaCalculation.appendChild(ol);
+  })
 

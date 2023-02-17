@@ -7,9 +7,11 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
   const triangleValue2 = triangleInputField2.value;
   triangleInputField2.value = '';
 
-  const areaOfTriangle = 0.5 * triangleValue1 * triangleValue2;
   
 
+  const areaOfTriangle = 0.5 * triangleValue1 * triangleValue2;
+  
+  
   const areaCalculation = document.getElementById('area-calculation')
   const ol = document.createElement('ol');
   ol.innerText = 'Triangle' + ' ' + areaOfTriangle  + 'cm';

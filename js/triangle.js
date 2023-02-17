@@ -1,18 +1,18 @@
 document.getElementById('btn-triangle').addEventListener('click', function(){
   const triangleInputField1 = document.getElementById('triangle-input-field1');
   const triangleValue1 = triangleInputField1.value;
-  console.log(triangleValue1)
+  triangleInputField1.value = '';
 
   const triangleInputField2 = document.getElementById('triangle-input-field2');
   const triangleValue2 = triangleInputField2.value;
-  console.log(triangleValue2)
+  triangleInputField2.value = '';
 
   const areaOfTriangle = 0.5 * triangleValue1 * triangleValue2;
-  console.log(areaOfTriangle)
+  
 
   const areaCalculation = document.getElementById('area-calculation')
   const ol = document.createElement('ol');
-  ol.innerText = 'Triangle'  + areaOfTriangle  + 'cm';
+  ol.innerText = 'Triangle' + ' ' + areaOfTriangle  + 'cm';
   areaCalculation.appendChild(ol);
 })
 
@@ -21,18 +21,62 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 document.getElementById('btn-rectangle').addEventListener('click', function(){
     const rectangleWidthField = document.getElementById('rectangle-width-field');
     const rectangleWidthValue = rectangleWidthField.value;
-    console.log(rectangleWidthValue)
+    rectangleWidthField.value = '';
   
     const rectangleLengthField = document.getElementById('rectangle-length-field');
     const rectangleLengthValue = rectangleLengthField.value;
-    console.log(rectangleLengthValue)
+    rectangleLengthField.value = '';
   
     const areaOfRectangle = rectangleWidthValue * rectangleLengthValue;
-    console.log(areaOfRectangle)
+    
   
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerText = 'Rectangle'  + areaOfRectangle  + 'cm';
+    ol.innerText = 'Rectangle' + ' ' + areaOfRectangle  + 'cm';
     areaCalculation.appendChild(ol);
   })
 
+
+
+
+document.getElementById('btn-parallelogram').addEventListener('click', function(){
+    const areaOfParallelogram =  10 * 12 ;
+
+    const areaCalculation = document.getElementById('area-calculation')
+    const ol = document.createElement('ol');
+    ol.innerText = 'Parallelogram ' + ' ' + areaOfParallelogram  + 'cm';
+    areaCalculation.appendChild(ol);
+})
+
+
+document.getElementById('btn-rhombus').addEventListener('click', function(){
+    const areaOfRhombus = 0.5 * 16 * 8 ;
+
+    const areaCalculation = document.getElementById('area-calculation')
+    const ol = document.createElement('ol');
+    ol.innerText = 'Rhombus' + ' ' + areaOfRhombus  + 'cm';
+    areaCalculation.appendChild(ol);
+})
+
+
+
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+    const areaOfPentagon = 0.5 * 6 * 10 ;
+
+    const areaCalculation = document.getElementById('area-calculation')
+    const ol = document.createElement('ol');
+    ol.innerText = 'Pentagon' + ' ' + areaOfPentagon  + 'cm';
+    areaCalculation.appendChild(ol);
+})
+
+
+
+
+document.getElementById('btn-ellipse').addEventListener('click', function(){
+    const areaOfEllipse = 3.1416 * 10 * 4 ;
+
+    const areaCalculation = document.getElementById('area-calculation')
+    const ol = document.createElement('ol');
+    ol.innerText = 'Ellipse' + ' '+ ' ' + areaOfEllipse  + 'cm';
+    areaCalculation.appendChild(ol);
+})

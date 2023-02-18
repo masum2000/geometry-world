@@ -5,16 +5,18 @@ document.getElementById('btn-blog').addEventListener('click', function(){
 
 // calculation the Area of Triangle
 document.getElementById('btn-triangle').addEventListener('click', function(){
+
   const triangleInputField1 = document.getElementById('triangle-input-field1');
   const triangleValue1String = triangleInputField1.value;
   const triangleValue1 = parseFloat(triangleValue1String);
   triangleInputField1.value = '';
   
-  
 
   const triangleInputField2 = document.getElementById('triangle-input-field2');
-  const triangleValue2 = triangleInputField2.value;
+  const triangleValue2String = triangleInputField2.value;
+  const triangleValue2 = parseFloat(triangleValue2String);
   triangleInputField2.value = '';
+
   if(triangleValue2 < 0 ){
     alert('Please input Two Positive Valid Number');
     return;
@@ -36,14 +38,17 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 
 // Calculation the Area of Rectangle
 document.getElementById('btn-rectangle').addEventListener('click', function(){
+
     const rectangleWidthField = document.getElementById('rectangle-width-field');
     const rectangleWidthValueString = rectangleWidthField.value;
     const rectangleWidthValue = parseFloat(rectangleWidthValueString);
     rectangleWidthField.value = '';
   
     const rectangleLengthField = document.getElementById('rectangle-length-field');
-    const rectangleLengthValue = rectangleLengthField.value;
+    const rectangleLengthValueString = rectangleLengthField.value;
+    const rectangleLengthValue = parseFloat(rectangleLengthValueString)
     rectangleLengthField.value = '';
+    
     if(rectangleLengthValue < 0 ){
       alert('Please input Two Positive Valid Number');
       return;

@@ -9,29 +9,27 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
   const triangleValue1String = triangleInputField1.value;
   const triangleValue1 = parseFloat(triangleValue1String);
   triangleInputField1.value = '';
+  
+  
 
   const triangleInputField2 = document.getElementById('triangle-input-field2');
   const triangleValue2 = triangleInputField2.value;
   triangleInputField2.value = '';
-  
-  
-  const areaOfTriangle = 0.5 * triangleValue1 * triangleValue2;
-  
-
-  if(isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == ''){
-    alert = 'Please Enter Positive Number';
+  if(triangleValue2 < 0 ){
+    alert('Please input Two Positive Valid Number');
     return;
   }
-//   if(areaOfTriangle < 0){
-//     alert = 'Please Enter Positive Number';
-//     return;
-//   }
-
   
+  const areaOfTriangle = 0.5 * triangleValue1 * triangleValue2;
+
+  if (isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == ""){
+    alert('Please input Two Positive Valid Number');
+    return;
+  }
   
   const areaCalculation = document.getElementById('area-calculation')
   const ol = document.createElement('ol');
-  ol.innerHTML = addSerialNumbers()  + '. Triangle' + ' ' + areaOfTriangle.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+  ol.innerHTML = addSerialNumbers()  + '. Triangle' + ' ' + areaOfTriangle.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color: #1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
   areaCalculation.appendChild(ol);
 })
 
@@ -46,18 +44,22 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
     const rectangleLengthField = document.getElementById('rectangle-length-field');
     const rectangleLengthValue = rectangleLengthField.value;
     rectangleLengthField.value = '';
+    if(rectangleLengthValue < 0 ){
+      alert('Please input Two Positive Valid Number');
+      return;
+    }
   
     const areaOfRectangle = rectangleWidthValue * rectangleLengthValue;
 
     if(isNaN(areaOfRectangle) || areaOfRectangle < 0 || areaOfRectangle == ''){
-      alert = 'Please Enter Positive Number';
+      alert ('Please input Two Positive Valid Number');
       return;
     }
     
   
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerHTML = addSerialNumbers() + '. Rectangle' + ' ' + areaOfRectangle.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+    ol.innerHTML = addSerialNumbers() + '. Rectangle' + ' ' + areaOfRectangle.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color:#1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
     areaCalculation.appendChild(ol);
   })
 
@@ -69,7 +71,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
 
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerHTML = addSerialNumbers() +  '. Parallelogram ' + ' ' + areaOfParallelogram.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+    ol.innerHTML = addSerialNumbers() +  '. Parallelogram ' + ' ' + areaOfParallelogram.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color:#1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
     areaCalculation.appendChild(ol);
 })
 
@@ -80,7 +82,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
 
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerHTML = addSerialNumbers() +  '. Rhombus' + ' ' + areaOfRhombus.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+    ol.innerHTML = addSerialNumbers() +  '. Rhombus' + ' ' + areaOfRhombus.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color:#1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
     areaCalculation.appendChild(ol);
 })
 
@@ -92,7 +94,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
 
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerHTML = addSerialNumbers() +  '. Pentagon' + ' ' + areaOfPentagon.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+    ol.innerHTML = addSerialNumbers() +  '. Pentagon' + ' ' + areaOfPentagon.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color:#1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
     areaCalculation.appendChild(ol);
 })
 
@@ -105,6 +107,6 @@ document.getElementById('btn-ellipse').addEventListener('click', function(){
 
     const areaCalculation = document.getElementById('area-calculation')
     const ol = document.createElement('ol');
-    ol.innerHTML = addSerialNumbers() +  '. Ellipse' + ' '+ ' ' + areaOfEllipse.toFixed(2)  + "<span>cm<sup>2</sup></span>";
+    ol.innerHTML = addSerialNumbers() +  '. Ellipse' + ' '+ ' ' + areaOfEllipse.toFixed(2)  + "<span>cm<sup>2</sup></span>" + ' ' +"<span style='color:white;background-color:#1E90FF; padding: 2px 2px; border-radius: 5px'>convert to m<sup>2</sup></span>";
     areaCalculation.appendChild(ol);
 })

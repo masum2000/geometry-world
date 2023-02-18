@@ -1,15 +1,19 @@
 
 // click Blog Button and go to the Blog Page
-document.getElementById('btn-blog').addEventListener('click', function(){
+function homeToBlog(){
   window.location.href ='blog.html';
-})
+}
+// click Home button and go to the blog page
+ function blogToHome(){
+  window.location.href ='index.html';
+}
 
 
 
 
 // calculation the Area of Triangle
 document.getElementById('btn-triangle').addEventListener('click', function(){
-
+  
 const triangleInputField1 = document.getElementById('triangle-input-field1');
 const triangleValue1String = triangleInputField1.value;
 const triangleValue1 = parseFloat(triangleValue1String);

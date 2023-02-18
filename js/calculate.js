@@ -24,15 +24,12 @@ const triangleValue2String = triangleInputField2.value;
 const triangleValue2 = parseFloat(triangleValue2String);
 triangleInputField2.value = '';
 
-if(triangleValue2 < 0 ){
-  alert('Please input Two Positive Valid Number');
-  return;
-}
+
 
 // use displayValue Function from common.js file
 const areaOfTriangle = 0.5 * (displayValue(triangleValue1, triangleValue2));
 
-if (isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == ""){
+if (isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == "" || typeof(triangleValue1)==! "number" || triangleValue2 < 0){
   alert('Please input Two Positive Valid Number');
   return;
 }
@@ -56,15 +53,11 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
   const rectangleLengthValue = parseFloat(rectangleLengthValueString)
   rectangleLengthField.value = '';
   
-  if(rectangleLengthValue < 0 ){
-    alert('Please input Two Positive Valid Number');
-    return;
-  }
 
 // use displayValue Function from common.js file
   const areaOfRectangle = displayValue(rectangleWidthValue, rectangleLengthValue);
 
-  if(isNaN(areaOfRectangle) || areaOfRectangle < 0 || areaOfRectangle == ''){
+  if(isNaN(areaOfRectangle) || areaOfRectangle < 0 || areaOfRectangle == "" || typeof(rectangleWidthValue)==! "number" || rectangleLengthValue < 0){
     alert ('Please input Two Positive Valid Number');
     return;
   }

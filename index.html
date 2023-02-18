@@ -11,8 +11,8 @@
   </head>
   <body>
     <!-- Navbar section start here -->
-    <header class="header container mt-4 p-2 rounded-2">
-        <nav class=" container navbar ">
+    <header class="header container-fluid  p-4 rounded-2">
+        <nav class=" mx-lg-5 navbar ">
             <div class="container-fluid">
               <img src="images/Interactive Geometry Book.png" width="175px">
               <form class="d-flex" role="search">
@@ -24,21 +24,22 @@
     <!-- Navbar section end here -->
     
     <!-- Main section start here -->
-    <main class="container">
+    <main class="container-fluid px-md-5">
       <!-- content section start here -->
         <section class="">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-9">
-                    <div class="row mb-4">
+                    <div class="row">
 
                         <div class="col-md-4">
+                          <!-- Triangle card start here -->
                             <div class="card mt-4 p-4 triangle-bg">
                                 <img src="images/triangle.jpg" class="card-img-top " alt="...">
                                 <div class="card-body text-center">
                                   <h5 class="card-title ">Triangle</h5>
                                   <p class="card-text">Area(A) = 0.5 * b * h</p> 
                                   <div class="d-flex gap-2 align-items-center">
-                                    <input id="triangle-input-field1" class="w-100" type="text" placeholder="b"><p>cm</p> <input id="triangle-input-field2" class="w-100" type="text" placeholder="h"><p>cm</p>
+                                    <input id="triangle-input-field1" class="w-100" type="text" placeholder="b"><p class="mt-3">cm</p> <input id="triangle-input-field2" class="w-100" type="text" placeholder="h"><p class="mt-3">cm</p>
                                   </div>
                 
                                   <button id="btn-triangle" class="btn btn-primary mt-2" type="button" >Calculate</button>
@@ -46,19 +47,21 @@
                               </div>
                         </div>
                         <div class="col-md-4 ">
+                          <!-- Rectangle card start here -->
                             <div class="card mt-4 p-4 rectangle-bg">
-                                <img src="images//rectangle.jpg" class="card-img-top " alt="...">
+                                <img src="images/rectangle.jpg" class="card-img-top " alt="...">
                                 <div class="card-body text-center">
                                   <h5 class="card-title ">Rectangle </h5>
                                   <p class="card-text">Area(A) = w * l </p> 
                                   <div class="d-flex gap-2 align-items-center">
-                                    <input id="rectangle-width-field" class="w-100" type="text" placeholder="w"><p>cm</p> <input id="rectangle-length-field" class="w-100" type="text" placeholder="l"><p>cm</p>
+                                    <input id="rectangle-width-field" class="w-100" type="text" placeholder="w"><p class="mt-3">cm</p> <input id="rectangle-length-field" class="w-100" type="text" placeholder="l"><p class="mt-3">cm</p>
                                   </div>
                                   
                                   <button id="btn-rectangle" class="btn btn-primary mt-2" type="button" >Calculate</button>
                                 </div>
                               </div>
                         </div>
+                        <!-- Parallelogram start here -->
                         <div class="col-md-4">
                             <div class="card mt-4 p-4 parallelogram-bg">
                                 <img src="images/parallelogram.jpg" class="card-img-top " alt="...">
@@ -71,6 +74,7 @@
                                 </div>
                               </div>
                         </div>
+                        <!--Rhombus card start here  -->
                         <div class="col-md-4">
                             <div class="card mt-4 p-4 rhombus-bg">
                                 <img src="images/rhombus.jpg" class="card-img-top " alt="...">
@@ -83,6 +87,7 @@
                                 </div>
                               </div>
                         </div>
+                        <!--Pentagon card start here  -->
                         <div class="col-md-4">
                             <div class="card mt-4 p-4 pentagon-bg" >
                                 <img src="images/pentagon.jpg" class="card-img-top " alt="...">
@@ -95,6 +100,7 @@
                                 </div>
                               </div>
                         </div>
+                        <!-- Ellipse card start here -->
                         <div class="col-md-4 ">
                             <div class="card mt-4 p-4 ellipse-bg" >
                                 <img src="images/ellipse.jpg" class="card-img-top " alt="...">
@@ -112,7 +118,7 @@
                 
                 <!-- Area calculation section start here -->
                 <div class="col-md-3">
-                    <div class="card mt-4 p-1" >
+                    <div class="card my-4 p-1  w-100" >
                         
                         <div class="">
                           <h5 id="" class="text-center"><u>Area Calculation</u></h5>
@@ -132,7 +138,7 @@
     <!-- javascript link added -->
     <script src="js/common.js"></script>
     <script src="js/calculate.js"></script>
-    <script src="js/hovercolor.js"></script>
+    <script src="js/hoverColor.js"></script>
     
 
     <!-- Bootstrap.bundle.min js link added -->

@@ -29,7 +29,7 @@ triangleInputField2.value = '';
 // use displayValue Function from common.js file
 const areaOfTriangle = 0.5 * (displayValue(triangleValue1, triangleValue2));
 
-if (isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == "" || typeof(triangleValue1)==! "number" || triangleValue2 < 0){
+if (isNaN(areaOfTriangle) || areaOfTriangle < 0 || areaOfTriangle == "" || typeof(triangleValue1) != "number" || typeof(triangleValue2) != "number" || triangleValue2 < 0){
   alert('Please input Two Positive Valid Number');
   return;
 }
@@ -57,7 +57,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
 // use displayValue Function from common.js file
   const areaOfRectangle = displayValue(rectangleWidthValue, rectangleLengthValue);
 
-  if(isNaN(areaOfRectangle) || areaOfRectangle < 0 || areaOfRectangle == "" || typeof(rectangleWidthValue)==! "number" || rectangleLengthValue < 0){
+  if(isNaN(areaOfRectangle) || areaOfRectangle < 0 || areaOfRectangle == "" || typeof(rectangleWidthValue)!= "number" || typeof(rectangleLengthValue) != "number" || rectangleLengthValue < 0){
     alert ('Please input Two Positive Valid Number');
     return;
   }
